@@ -1,26 +1,19 @@
-$bg: #0b0b0d; // fondo principal (muy oscuro)
-$surface: #121214; // tarjetas
-$muted: #9aa0a6;
-$accent: #7c3aed; // púrpura
-$accent-2: #00bfa6; // verde azulado
-$danger: #ff6b6b;
-$glass: rgba(255, 255, 255, 0.04);
-
 * {
   box-sizing: border-box;
 }
+
 :root {
   --safe-top: env(safe-area-inset-top);
 }
 
 body {
-  background: linear-gradient(180deg, $bg 0%, darken($bg, 4%) 100%);
+  background: linear-gradient(180deg, #0b0b0d 0%, rgb(1.65, 1.65, 1.95) 100%);
   color: #e6eef5;
   font-family: Inter, system-ui, -apple-system, "Helvetica Neue", Arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.3;
-  padding-bottom: 80px; // espacio para nav inferior
+  padding-bottom: 80px;
 }
 
 header.appbar {
@@ -39,9 +32,11 @@ header.appbar {
   font-weight: 700;
   letter-spacing: 0.2px;
 }
+
 .search {
   flex: 1;
 }
+
 .search input {
   width: 100%;
   padding: 0.7rem 0.9rem;
@@ -50,11 +45,10 @@ header.appbar {
   background: transparent;
   color: inherit;
   transition: 0.2s;
-
-  &:focus {
-    border: 0.3rem solid #e6eef51f;
-    outline: none;
-  }
+}
+.search input:focus {
+  border: 0.3rem solid rgba(230, 238, 245, 0.1215686275);
+  outline: none;
 }
 
 .hero {
@@ -63,10 +57,12 @@ header.appbar {
   gap: 1rem;
   align-items: center;
 }
+
 .hero .greeting {
   font-size: 0.95rem;
-  color: $muted;
+  color: #9aa0a6;
 }
+
 .hero .title {
   font-size: 1.2rem;
   font-weight: 700;
@@ -78,15 +74,16 @@ header.appbar {
   padding: 0.6rem 1rem;
   overflow: auto;
 }
+
 .chip {
   padding: 0.45rem 0.8rem;
   border-radius: 999px;
-  background: $glass;
+  background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.03);
   font-size: 0.85rem;
-  &:active {
-    background-color: #ffffff2c;
-  }
+}
+.chip:active {
+  background-color: rgba(255, 255, 255, 0.1725490196);
 }
 
 .grid {
@@ -95,35 +92,31 @@ header.appbar {
   grid-template-columns: repeat(2, 1fr);
   gap: 0.8rem;
 }
+
 .card {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.02),
-    rgba(255, 255, 255, 0.01)
-  );
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
   padding: 0.7rem;
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.03);
 }
+
 .thumb {
   width: 100%;
   aspect-ratio: 1/1;
   border-radius: 12px;
-  background: linear-gradient(
-    45deg,
-    rgba(124, 58, 237, 0.12),
-    rgba(0, 191, 166, 0.06)
-  );
+  background: linear-gradient(45deg, rgba(124, 58, 237, 0.12), rgba(0, 191, 166, 0.06));
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .price {
   font-weight: 700;
   margin-top: 0.45rem;
 }
+
 .muted {
-  color: $muted;
+  color: #9aa0a6;
   font-size: 0.85rem;
 }
 
@@ -139,10 +132,11 @@ header.appbar {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.02), transparent);
   border-top: 1px solid rgba(255, 255, 255, 0.02);
 }
+
 .btn {
   padding: 0.6rem 0.8rem;
   border-radius: 12px;
-  background: linear-gradient(90deg, $accent, lighten($accent, 6%));
+  background: linear-gradient(90deg, #7c3aed, rgb(142.6446511628, 86.0381395349, 239.5618604651));
   color: white;
   border: none;
   font-weight: 600;
@@ -156,15 +150,17 @@ header.appbar {
   align-items: flex-end;
   z-index: 100;
 }
+
 .modal.show {
   display: flex;
 }
+
 .sheet {
   width: 100%;
   max-height: 84%;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
-  background: linear-gradient(180deg, $surface, darken($surface, 6%));
+  background: linear-gradient(180deg, #121214, rgb(3.5052631579, 3.5052631579, 3.8947368421));
   padding: 1rem;
   box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.6);
   overflow: auto;
@@ -174,17 +170,18 @@ header.appbar {
 .open-cart {
   background-color: transparent;
   border: none;
-  svg {
-    width: 1.5rem;
-    height: 1.5rem;
-    stroke: #e6eef5;
-  }
-  &:active {
-    background-color: #ffffff2c;
-  }
 }
+.open-cart svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  stroke: #e6eef5;
+}
+.open-cart:active {
+  background-color: rgba(255, 255, 255, 0.1725490196);
+}
+
 .cart-badge {
-  background: $accent-2;
+  background: #00bfa6;
   color: #021012;
   font-weight: 700;
   padding: 0.15rem 0.45rem;
@@ -209,3 +206,5 @@ header.appbar {
     display: none;
   }
 }
+
+/*# sourceMappingURL=index.css.map */
