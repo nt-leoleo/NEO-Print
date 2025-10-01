@@ -2,57 +2,57 @@
 const products = [
   {
     id: 1,
-    title: "Runner Night X1",
+    title: "MODEL A1",
     price: 12990,
-    tag: "deportivas",
+    tag: "Importado",
     img: "",
-    gender: "hombres",
-    desc: "Livianas, suela reflectiva y amortiguación",
+    gender: "",
+    desc: "Descripción por defecto",
   },
   {
     id: 2,
-    title: "Urban Steps",
+    title: "MODEL B1",
     price: 9990,
-    tag: "casuales",
+    tag: "Importado",
     img: "",
-    gender: "mujeres",
-    desc: "Comodidad urbana y estilo minimal",
+    gender: "",
+    desc: "Descripción por defecto",
   },
   {
     id: 3,
-    title: "Trail Master",
+    title: "MODEL A2",
     price: 15990,
-    tag: "deportivas",
+    tag: "Importado",
     img: "",
-    gender: "hombres",
-    desc: "Agarre superior para terreno difícil",
+    gender: "",
+    desc: "Descripción por defecto",
   },
   {
     id: 4,
-    title: "Classic Boot",
+    title: "MODEL B2",
     price: 17990,
-    tag: "casuales",
+    tag: "Modelo propio",
     img: "",
-    gender: "mujeres",
-    desc: "Bota impermeable para lluvia",
+    gender: "",
+    desc: "Descripción por defecto",
   },
   {
     id: 5,
-    title: "Slip-On Lite",
+    title: "MODEL C1",
     price: 7990,
     tag: "nuevos",
     img: "",
-    gender: "mujeres",
-    desc: "Fácil calce, ideal para todo día",
+    gender: "",
+    desc: "Descripción por defecto",
   },
   {
     id: 6,
-    title: "Street Runner",
+    title: "MODEL C2",
     price: 13990,
-    tag: "nuevos",
+    tag: "Modelo propio",
     img: "",
-    gender: "hombres",
-    desc: "Diseño moderno y suela antideslizante",
+    gender: "",
+    desc: "Descripción por defecto",
   },
 ];
 
@@ -77,7 +77,7 @@ function renderProducts(list) {
     card.innerHTML = `
         <div class="thumb" data-id="${p.id}">
           <div style="text-align:center">
-            <div style="font-weight:800">👟</div>
+            <div style="font-weight:800">MODEL</div>
             <div style="font-size:.75rem; margin-top:.5rem">${p.tag.toUpperCase()}</div>
           </div>
         </div>
