@@ -137,6 +137,7 @@ header.appbar {
   align-items: center;
   padding: 0.7rem 0;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.02), transparent);
+  backdrop-filter: blur(6px);
   border-top: 1px solid rgba(255, 255, 255, 0.02);
 }
 .btn {
@@ -155,9 +156,9 @@ header.appbar {
   display: none;
   align-items: flex-end;
   z-index: 100;
-}
-.modal.show {
-  display: flex;
+  &.show {
+    display: flex;
+  }
 }
 .sheet {
   width: 100%;
@@ -207,5 +208,6 @@ header.appbar {
   }
   .bottom-nav {
     display: none;
+    backdrop-filter: blur(6px);
   }
 }
