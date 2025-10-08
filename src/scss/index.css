@@ -7,7 +7,7 @@
 }
 
 body {
-  background: linear-gradient(180deg, #0b0b0d 0%, rgb(1.65, 1.65, 1.95) 100%);
+  background: linear-gradient(180deg, #0b0b0d 0%);
   color: #e6eef5;
   font-family: Inter, system-ui, -apple-system, "Helvetica Neue", Arial;
   -webkit-font-smoothing: antialiased;
@@ -49,6 +49,20 @@ header.appbar {
 .search input:focus {
   border: 0.3rem solid rgba(230, 238, 245, 0.1215686275);
   outline: none;
+}
+
+.btn {
+  background: #7c3aed;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  padding: 0.6rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn:active {
+  background-color: rgba(255, 255, 255, 0.1725490196);
 }
 
 .hero {
@@ -130,16 +144,16 @@ header.appbar {
   align-items: center;
   padding: 0.7rem 0;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.02), transparent);
+  backdrop-filter: blur(6px);
   border-top: 1px solid rgba(255, 255, 255, 0.02);
 }
-
-.btn {
-  padding: 0.6rem 0.8rem;
-  border-radius: 12px;
-  background: linear-gradient(90deg, #7c3aed, rgb(142.6446511628, 86.0381395349, 239.5618604651));
-  color: white;
+.bottom-nav button {
+  background: transparent;
   border: none;
-  font-weight: 600;
+}
+.bottom-nav button .svg {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 /* modal simple */
@@ -150,7 +164,6 @@ header.appbar {
   align-items: flex-end;
   z-index: 100;
 }
-
 .modal.show {
   display: flex;
 }
@@ -160,7 +173,7 @@ header.appbar {
   max-height: 84%;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
-  background: linear-gradient(180deg, #121214, rgb(3.5052631579, 3.5052631579, 3.8947368421));
+  background: linear-gradient(180deg, #121214);
   padding: 1rem;
   box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.6);
   overflow: auto;
@@ -171,7 +184,7 @@ header.appbar {
   background-color: transparent;
   border: none;
 }
-.open-cart svg {
+.open-cart img {
   width: 1.5rem;
   height: 1.5rem;
   stroke: #e6eef5;
@@ -194,17 +207,6 @@ header.appbar {
   display: flex;
   gap: 0.6rem;
   align-items: center;
-}
-
-@media (min-width: 720px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 980px;
-    margin: 0 auto;
-  }
-  .bottom-nav {
-    display: none;
-  }
 }
 
 /*# sourceMappingURL=index.css.map */
